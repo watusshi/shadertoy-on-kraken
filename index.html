@@ -47,7 +47,7 @@
 
       function start() {
         const params = new URL(window.location.href).searchParams;
-        const shader = params.get("shader") || "tsXBzS";
+        const shader = params.get("shader") || "tdG3Rd";
         const processor = params.get("processor");
         const kraken = params.get("kraken");
 
@@ -168,7 +168,7 @@
             onMonitoringDataUpdate: (pc) => {
               if (!processor) return;
               const processingUnit =
-                processor === "cpu" ? pc.gpus[0] : pc.cpus[0];
+                processor === "gpu" ? pc.gpus[0] : pc.cpus[0];
               const temperature = Math.floor(processingUnit.temperature);
               const minTemperature = 0;
               const maxTemperature = 100;
