@@ -168,7 +168,7 @@
             onMonitoringDataUpdate: (pc) => {
               if (!processor) return;
               const processingUnit =
-                processor === "gpu" ? pc.gpus[0] : pc.cpus[0];
+                processor === "cpu" ? pc.gpus[0] : pc.cpus[0];
               const temperature = Math.floor(processingUnit.temperature);
               const minTemperature = 0;
               const maxTemperature = 100;
